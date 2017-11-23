@@ -6,9 +6,12 @@ import { MainContentComponent } from './shell/main-content/main-content.componen
 import { HeaderComponent } from './shell/header/header.component';
 import { FooterComponent } from './shell/footer/footer.component';
 
+import { CoreRoutingModule } from './core-routing.module';
+
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    CoreRoutingModule
   ],
   declarations: [
     ShellComponent,
