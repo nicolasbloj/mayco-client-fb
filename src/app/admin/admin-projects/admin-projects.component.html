@@ -1,0 +1,40 @@
+<div>
+    <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          placeholder="Ingresar nombre de proyecto" 
+          [(ngModel)]="project_aux.name">
+    
+    <br>
+      
+    <br>
+
+    <label for="exampleInputFile"> Elegir imagen de proyecto </label>
+  
+      <input 
+            id="exampleInputFile"
+            type="file"
+            aria-describedby="fileHelp"     
+            accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|images/*"
+            (change)="handleFileSelect($event)">
+
+      <br>  
+        
+      <br>
+      
+      <!--textarea 
+                id='description' 
+                name='description'
+                placeholder="Breve descripcion del proyecto." 
+                rows="10" cols="15"
+                [ngModel]='project_aux.description' 
+                #description='ngModel'
+                required maxlength="254">
+      </textarea-->
+      
+      <br>
+      
+      <button (click)="upload()"> Publicar proyecto </button>
+</div>
+  
