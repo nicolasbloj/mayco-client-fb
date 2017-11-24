@@ -10,7 +10,7 @@ export const environment = {
     authDomain: 'mayco-backend.firebaseapp.com',
     databaseURL: 'https://mayco-backend.firebaseio.com',
     projectId: 'mayco-backend',
-    storageBucket: '',
+    storageBucket: 'mayco-backend.appspot.com',
     messagingSenderId: '211952405898'
   }
 };
