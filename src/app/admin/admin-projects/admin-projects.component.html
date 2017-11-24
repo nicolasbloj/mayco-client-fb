@@ -1,4 +1,9 @@
 <div>
+    
+    <label for="exampleInputFile"> Proyecto : </label>
+    
+    <br>
+
     <input 
           type="text" 
           id="name" 
@@ -22,16 +27,19 @@
       <br>  
         
       <br>
+
+      <br>
       
-      <!--textarea 
+      <textarea 
                 id='description' 
                 name='description'
                 placeholder="Breve descripcion del proyecto." 
                 rows="10" cols="15"
                 [ngModel]='project_aux.description' 
+                (ngModelChange)='updateDescription($event)'
                 #description='ngModel'
                 required maxlength="254">
-      </textarea-->
+      </textarea>
       
       <br>
       

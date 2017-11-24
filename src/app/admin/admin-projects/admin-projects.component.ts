@@ -23,7 +23,17 @@ export class AdminProjectsComponent implements OnInit {
     this.project_aux.file = file;
   }
 
+  updateDescription(description: string): void {
+    if (description.length > 254) {
+      this.project_aux.description = description.substring(0, 251) + '...';
+    } else {
+      this.project_aux.description = description;
+    }
+
+  }
+
   upload() {
+    console.log(this.project_aux);
     this._imagesService.loadImages([this.project_aux]);
   }
 
