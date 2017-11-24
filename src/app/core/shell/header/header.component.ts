@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  PATH_LOGO = 'assets/logo_sin_fondo.png';
+
   constructor() { }
 
   ngOnInit() {
