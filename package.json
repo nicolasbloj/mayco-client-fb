@@ -25,7 +25,11 @@
     "core-js": "^2.4.1",
     "firebase": "^4.6.2",
     "rxjs": "^5.4.2",
-    "zone.js": "^0.8.14"
+    "zone.js": "^0.8.14",
+    "bootstrap": "^4.0.0-alpha.6",
+    "tether": "^1.4.0",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.5"
   },
   "devDependencies": {
     "@angular/cli": "1.4.2",
