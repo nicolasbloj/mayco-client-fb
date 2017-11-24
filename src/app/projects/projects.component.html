@@ -1,3 +1,54 @@
-<p>
-  projects works!
-</p>
+<!-- Page Heading -->
+<h1 class="my-4">Nuestros proyectos
+    <!--small>Secondary Text</small-->
+</h1>
+
+<!-- ProjectS -->
+
+<div *ngIf="isLoading$; then ifcondition else elsecondition"> ... </div>
+
+<ng-template #ifcondition>
+    <div>
+        <h4>Cargando proyectos ...</h4>
+    </div>
+</ng-template>
+<ng-template #elsecondition>
+
+    <div *ngIf="projects.length>0; then ifcondition else elsecondition">...</div>
+
+    <ng-template #ifcondition>
+        <div *ngFor="let project of projects">
+            <hr>
+            <div class="row animated fadeIn">
+                <div class="col-md-7">
+                    <a href="#">
+                   <img     id="image"
+                            class="img-fluid rounded mb-3 mb-md-0" 
+                            src="{{project.url}}" >
+            </a>
+                </div>
+                <div class="col-md-5  animated fadeIn fast">
+                    <h3>{{project.name}}</h3>
+
+                    <blockquote class="blockquote">
+                        <p class="mb-0">{{project.description}}</p>
+                    </blockquote>
+
+                    <!--a class="btn btn-primary" href="#">View Project</a-->
+                </div>
+            </div>
+            <!-- /.row -->
+            <br>
+
+        </div>
+    </ng-template>
+
+    <ng-template #elsecondition>
+        <div class="alert alert-danger" role="alert">
+            <strong>Atención: </strong>No se encontraron proyectos publicados.
+        </div>
+    </ng-template>
+
+
+
+</ng-template>
