@@ -1,0 +1,57 @@
+<div class="row">
+  <div class="col-md-6">
+    <h1 class="my-4">Administrar Servicios</h1>
+  </div>
+</div>
+
+<div class="form-group">
+  <input type="text" class="form-control" placeholder="Ingresar nombre de sevicio" [(ngModel)]="skill_aux.name">
+
+  <br>
+
+  <textarea class="form-control" placeholder="Breve descripcion del proyecto (maximo 255 caracteres)" [ngModel]='skill_aux.description'
+    (ngModelChange)='updateDescription($event)' rows="10" cols="15"></textarea>
+  <br>
+
+  <button class="btn btn-primary" (click)="upload()" [disabled]='publicando'>Publicar service</button>
+
+</div>
+
+<br>
+<br>
+
+<h3>Servicios publicados</h3>
+
+<button class="btn btn-success" (click)="list()">Listar servicios</button>
+
+<div *ngIf="isLoading$; then ifcondition"> ... </div>
+
+<ng-template #ifcondition>
+  <div>
+    <h4>Cargando servicios ...</h4>
+  </div>
+</ng-template>
+
+
+<br>
+
+<br>
+<br>
+
+
+<div class="card-columns">
+
+  <!--div class="col-md-4 col-xs-12" -->
+  <div class="card text-white animated fadeIn" *ngFor="let skill of skills ; let i = index" style="width: 20rem;background-color:#212529;;margin:10px">
+    <div class="card-body">
+      <div class="card-body text-center">
+        <h2 class="card-title">{{skill.name}}</h2>
+        <p class="card-text">{{skill.description}}</p>
+        <p class="card-text"><small class="text-muted">{{skill.id }}</small></p>
+        <button type="button" class="btn btn-outline-danger btn-block" (click)="delete(i)">Eliminar</button>
+      </div>
+      <hr>
+    </div>
+  </div>
+  <!--/div-->
+</div>

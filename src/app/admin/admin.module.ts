@@ -8,9 +8,12 @@ import { AdminProjectsComponent } from './admin-projects/admin-projects.componen
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../../environments/environment';
 
-// services
 import { AngularFireDatabase } from 'angularfire2/database/public_api';
+
+// services
 import { ImagesService } from '../_services/images.service';
+import { AdminSkillsComponent } from './admin-skills/admin-skills.component';
+import { SkillsService } from '../_services/skills.service';
 
 @NgModule({
   imports: [
@@ -19,7 +22,7 @@ import { ImagesService } from '../_services/images.service';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],
-  providers: [ImagesService, AngularFireDatabase],
-  declarations: [AdminComponent, AdminProjectsComponent]
+  providers: [ImagesService, SkillsService, AngularFireDatabase],
+  declarations: [AdminComponent, AdminProjectsComponent, AdminSkillsComponent]
 })
 export class AdminModule { }

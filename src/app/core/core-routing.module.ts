@@ -24,6 +24,10 @@ const routes: Routes = [
         loadChildren: '../admin/admin.module#AdminModule'
     },
     {
+        path: 'skills',
+        loadChildren: '../skills/skills.module#SkillsModule'
+    },
+    {
         path: '**', pathMatch: 'full', redirectTo: ''
     }
 ];
